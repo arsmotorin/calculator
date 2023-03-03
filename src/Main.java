@@ -1,22 +1,33 @@
 import java.util.Scanner;
-import java.lang.Math;
 public class Main {
     public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
-        System.out.print("First number: ");
-        float one = scan.nextFloat();
-
-        System.out.print("Second number: ");
-        float two = scan.nextFloat();
-
-        float res_one = one + two;
-        float res_two = one - two;
-        float res_three = one * two;
-        float res_four = one / two;
-        int res_five = (int) Math.sqrt(one);
-        int res_six = (int) Math.sqrt(two);
-
-        System.out.println("+ " + res_one + "\n- " + res_two + "\n* " + res_three + "\n/ " + res_four +
-                "\nsqrt first number " + res_five + "\nsqrt second number " + res_six);
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter 1st number: ");
+        short num1 = sc.nextShort();
+        System.out.print("Enter 2nd number: ");
+        short num2 = sc.nextShort();
+        plus(num1, num2);
+        minus(num1, num2);
+        delenie(num1, num2);
+        umn(num1,num2);
     }
+
+    public static void plus(short num1, short num2) {
+        int res = num1 + num2;
+        System.out.println("Result +: " + res);
+    }
+
+    public static void minus(short num1, short num2) {
+        int res = num1 - num2;
+        System.out.println("Result -: " + res);
+    }
+
+    public static void umn(short num1, short num2) {
+        int res = num1 * num2;
+        System.out.println("Result *: " + res);
+    }
+    public static void delenie(short num1, short num2) {
+        int res = num1 / num2;
+        System.out.println("Result /: " + res);
+    } 
 }
